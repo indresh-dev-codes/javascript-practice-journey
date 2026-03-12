@@ -9,3 +9,4 @@ function decrease() {
   count--;
   document.getElementById("count").textContent = count;
 }
+console.log("Hello");
