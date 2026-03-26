@@ -6,3 +6,4 @@ for (let i = 0; i < cars.length; i++) {
 }
 
 document.getElementById("demo").innerHTML = text;
+//end
