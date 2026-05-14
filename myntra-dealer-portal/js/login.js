@@ -1,9 +1,9 @@
-// Get elements
 let emailInput = document.getElementById("email");
 let passwordInput = document.getElementById("password");
 let loginBtn = document.getElementById("loginBtn");
 let message = document.getElementById("message");
 let showPasswordBtn = document.getElementById("showPassword");
+let forgotBtn = document.getElementById("forgotBtn");
 showPasswordBtn.addEventListener("click", function () {
 
     if(passwordInput.type === "password"){
@@ -45,4 +45,8 @@ loginBtn.addEventListener("click", function () {
         message.innerText = "Invalid credentials";
     }
 
+});
+// Forgot Password
+forgotBtn.addEventListener("click", function () {
+    alert("Password reset link sent to your email");
 });
