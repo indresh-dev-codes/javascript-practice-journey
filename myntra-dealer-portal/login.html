@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Myntra Dealer Login</title>
 
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-100 flex justify-center items-center h-screen">
 
-    <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+    <div class="bg-white shadow-lg rounded-lg p-8 w-96">
 
-        <h1 class="text-2xl font-bold text-center mb-6">
-            Dealer Login
+        <h1 class="text-2xl font-bold text-center mb-6 text-pink-600">
+            Myntra Dealer Login
         </h1>
 
         <!-- Email -->
         <input 
             type="email"
             id="email"
-            placeholder="Enter email"
-            class="w-full border p-2 mb-4 rounded"
+            placeholder="Enter Email"
+            class="w-full border p-2 rounded mb-4"
         >
 
         <!-- Password -->
         <input 
             type="password"
             id="password"
-            placeholder="Enter password"
-            class="w-full border p-2 mb-4 rounded"
+            placeholder="Enter Password"
+            class="w-full border p-2 rounded mb-4"
         >
 
-        <!-- Show password -->
-        <button 
+        <!-- Show Password -->
+        <button
             id="showPassword"
-            class="bg-gray-300 px-4 py-2 rounded mb-4"
+            class="bg-gray-300 px-4 py-2 rounded mb-4 w-full"
         >
             Show Password
         </button>
 
-        <!-- Login button -->
-        <button 
+        <!-- Login Button -->
+        <button
             id="loginBtn"
-            class="w-full bg-pink-500 text-white p-2 rounded"
+            class="bg-pink-500 text-white w-full py-2 rounded"
         >
             Login
         </button>
-                <!-- Forgot Password -->
+
+        <!-- Forgot Password -->
         <button
             id="forgotBtn"
             class="text-blue-500 mt-4 w-full"
@@ -52,10 +57,12 @@
             Forgot Password?
         </button>
 
-        <p id="message" class="text-red-500 mt-4 text-center"></p>
+        <!-- Message -->
+        <p id="message" class="text-center mt-4"></p>
 
     </div>
 
     <script src="./js/login.js"></script>
+
 </body>
 </html>

@@ -1,40 +1,52 @@
+// Selecting elements
 let emailInput = document.getElementById("email");
 let passwordInput = document.getElementById("password");
 let loginBtn = document.getElementById("loginBtn");
 let message = document.getElementById("message");
 let showPasswordBtn = document.getElementById("showPassword");
 let forgotBtn = document.getElementById("forgotBtn");
+
+
+// Show/Hide Password
 showPasswordBtn.addEventListener("click", function () {
 
-    if(passwordInput.type === "password"){
+    if (passwordInput.type === "password") {
         passwordInput.type = "text";
         showPasswordBtn.innerText = "Hide Password";
-    }
-    else{
+    } 
+    else {
         passwordInput.type = "password";
         showPasswordBtn.innerText = "Show Password";
     }
 
 });
+
+
+// Login Logic
 loginBtn.addEventListener("click", function () {
 
-    let emailValue = emailInput.value;
-    let passwordValue = passwordInput.value;
+    let emailValue = emailInput.value.trim();
+    let passwordValue = passwordInput.value.trim();
 
-    if(emailValue === "" || passwordValue === ""){
+    // Empty validation
+    if (emailValue === "" || passwordValue === "") {
+        message.style.color = "red";
         message.innerText = "Please fill all fields";
         return;
     }
 
-    if(
+    // Dummy credentials
+    if (
         emailValue === "dealer@myntra.com" &&
         passwordValue === "12345"
-    ){
+    ) {
         message.style.color = "green";
         message.innerText = "Login Successful";
 
+        // Store login session
         localStorage.setItem("dealerEmail", emailValue);
 
+        // Redirect after 2 sec
         setTimeout(function () {
             window.location.href = "dashboard.html";
         }, 2000);
@@ -42,10 +54,12 @@ loginBtn.addEventListener("click", function () {
     } 
     else {
         message.style.color = "red";
-        message.innerText = "Invalid credentials";
+        message.innerText = "Invalid Credentials";
     }
 
 });
+
+
 // Forgot Password
 forgotBtn.addEventListener("click", function () {
     alert("Password reset link sent to your email");

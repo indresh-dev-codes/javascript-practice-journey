@@ -20,5 +20,7 @@ logoutBtn.addEventListener("click", function () {
 
     alert("Logged out successfully");
 
-    window.location.href = "login.html";
+    setTimeout(function () {
+        window.location.href = "login.html";
+    }, 1000);
 });
